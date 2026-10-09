@@ -1,0 +1,28 @@
+13:08:15.154 [ERROR] io.gatling.app.Gatling$ - Run crashed
+uk.gov.hmrc.performance.conf.ServicesConfiguration$ConfigNotFoundException: 'report-transfer-qualifying-recognised-overseas-pension-scheme' not defined in 'services-local.conf'.
+	at uk.gov.hmrc.performance.conf.ServicesConfiguration.baseUrlFor(ServicesConfiguration.scala:48)
+	at uk.gov.hmrc.performance.conf.ServicesConfiguration.baseUrlFor$(ServicesConfiguration.scala:30)
+	at uk.gov.hmrc.perftests.requests.AuthRequests$.baseUrlFor(AuthRequests.scala:25)
+	at uk.gov.hmrc.perftests.requests.BaseRequests.$init$(BaseRequests.scala:27)
+	at uk.gov.hmrc.perftests.requests.AuthRequests$.<clinit>(AuthRequests.scala:25)
+	... 16 common frames omitted
+Wrapped by: java.lang.ExceptionInInitializerError
+	at uk.gov.hmrc.perftests.simulation.Simulation.<init>(Simulation.scala:26)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	... 14 common frames omitted
+Wrapped by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:79)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at io.gatling.app.SimulationClass$Scala.params(SimulationClass.scala:48)
+	at io.gatling.app.Runner.load(Runner.scala:88)
+	at io.gatling.app.Runner.run(Runner.scala:55)
+	at io.gatling.app.Gatling$.start(Gatling.scala:90)
+	at io.gatling.app.Gatling$.fromArgs(Gatling.scala:46)
+	at io.gatling.sbt.GatlingTask.liftedTree1$1(GatlingTask.scala:53)
+	at io.gatling.sbt.GatlingTask.execute(GatlingTask.scala:51)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:414)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
